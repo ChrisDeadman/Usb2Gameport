@@ -43,8 +43,9 @@ public:
       *x = 0;
       *y = 0;
     } else {
-      xAbs = ((xAbs - deadzone) / (1.0f - deadzone));
-      yAbs = ((yAbs - deadzone) / (1.0f - deadzone));
+      float scalingFactor = ((magnitude - deadzone) / (1.0f - deadzone));
+      xAbs = (xAbs / magnitude) * scalingFactor;
+      yAbs = (yAbs / magnitude) * scalingFactor;
       *x = (*x < 0) ? max(-xAbs, -1) : min(xAbs, 1);
       *y = (*y < 0) ? max(-yAbs, -1) : min(yAbs, 1);
     }
