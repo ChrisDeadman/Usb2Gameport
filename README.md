@@ -6,6 +6,8 @@ Author: ChrisDeadman
 
 Convert a USB HID device (joystick, gamepad) into a Gameport joystick with the power of arduino :-)
 
+**Note**: This is obsolete and has been superseded by [usb-to-ps2-gameport-hat](https://github.com/ChrisDeadman/usb-to-ps2-gameport-hat).
+
 ![Example Device](example_device.jpg)
 
 ## Notes
